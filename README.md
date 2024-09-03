@@ -47,12 +47,22 @@ curl http://localhost:11434/api/generate -d '{
 ## 5. para guardar en GitHub
 Para actualizar en GitHub se puede de 3 maneras:
 
-git add .
+Prepara el archivo README.md para ser incluido en la siguiente versión del proyecto.
+````bash
+git add README.md
+````
 
-git commit -m "UPDATED README.md
-
+Crea una nueva versión del proyecto, incluyendo los cambios del archivo README.md y añadiendo un mensaje descriptivo.
+````bash
+git commit -m "UPDATED README.md"
+````
+Envía la nueva versión del proyecto (con los cambios) al repositorio remoto en GitHub, específicamente a la rama principal llamada main
+````bash
+git push origin main
+````
+````bash
 git push -u origin main$ curl -fsSL https://ollama.com/install.sh |sh
-
+````
 
 
 ## 6.Consultar a groq
