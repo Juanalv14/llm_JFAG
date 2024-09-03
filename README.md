@@ -76,4 +76,26 @@ curl "https://api.groq.com/openai/v1/chat/completions" \
        }'
   ````
 
-  ##
+  ## 7. Ejecutar codigo en python
+
+  Estructura ejemplo:
+ ````bash 
+  import requests
+
+url = 'http://localhost:11434/api/generate'
+myobj = {
+    'model': 'tinyllama',
+    'prompt': 'Why is the sky blue?',
+    'stream': False
+}
+
+x = requests.post(url, json = myobj)
+
+print(x.text)
+````
+
+Codigo para ejecutar el codigo:
+
+  ````bash
+ python3 00_app.py
+````
